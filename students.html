@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Students list</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Hogwarts Student List</h1>
+    Expelled: <b id="expellednr"></b><br />
+    Current: <b id="curentnr"></b><br />
+    Gryffindor: <b id="houseG"></b> Hufflepuff: <b id="houseH"></b> Ravenclaw:
+    <b id="houseR"></b> Slytherin: <b id="houseS"></b>
+    <hr />
+
+    <div style="display: inline-block;">
+      <label>
+        Sort by:
+        <select id="sorting">
+          <option value="firstname">First name</option>
+          <option value="lastname">Last name</option>
+          <option value="house">House</option>
+        </select>
+      </label>
+
+      <label>
+        Filter by:
+        <select id="filter">
+          <option value="ALL">All</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Slytherin">Slytherin</option>
+        </select>
+      </label>
+    </div>
+    <hr />
+    <table id="list">
+      <thead>
+        <tr>
+          <th class="sortbutton" data-sort="firstname"></th>
+          <th class="sortbutton" data-sort="lastname"></th>
+          <th class="sortbutton" data-sort="house"></th>
+        </tr>
+      </thead>
+      <tbody id="student">
+        <!-- template will be copied and inserted here -->
+      </tbody>
+    </table>
+
+    <div class="modal-bg hide">
+      <div class="modal-content">
+        <button class="close">close</button><br />
+        First name: <b class="modal-firstname"></b><br />
+        <!-- Middle name: <b class="modal-middlename"></b><br> -->
+        Last name: <b class="modal-lastname"></b><br />
+        House: <b class="modal-house"></b><br />
+        Gender: <b class="modal-gender"></b><br />
+        Blood status: <b class="modal-bloodstatus"></b><br /><br />
+        <div style="display: inline-block;">
+          <img
+            class="modal-crest"
+            src=""
+            alt="student color crest"
+            style="height:20%; width:20%"
+          />
+          <img
+            class="modal-image"
+            src=""
+            alt="student face"
+            style="height:20%; width:20%"
+          />
+        </div>
+
+        <p class="modal-description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
+    </div>
+    <template id="myTemp">
+      <article>
+        <b style="display:none" data-field="uuid"></b>
+        First name: <b data-field="firstname"></b><br />
+        Last Name: <b data-field="lastname">Last name</b><br />
+        House: <b data-field="house">House</b>
+        <!-- <img class="imageT"></img> -->
+        <div>
+          <button class="buttonDetails" data-action="modal">See more</button>
+        </div>
+        <div>
+          <button class="buttonremove" data-action="remove">Expelled</button>
+        </div>
+        <b>Prefect </b>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </article>
+    </template>
+
+    <script src="scripts/scriptstudents.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+/* I've used Google fonts*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  margin: auto;
+  width: 35%;
+  border: 3px solid #73ad21;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  color: #1a7e79;
+}
+
+article {
+  padding: 1em;
+  border: solid 2px;
+  width: 80%;
+  margin-left: 30px;
+  border-color: #2c3e50;
+  background-color: #1a7e79; /* fallback for old browsers */
+  border-radius: 50px;
+}
+
+.close {
+  display: block;
+  background: orange;
+  color: black;
+  width: 8%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.modal-bg {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: black;
+  border: 1px solid orange;
+  margin: auto;
+  margin-top: 100px;
+  padding: 2em;
+  width: 80%;
+  height: 70%;
+  color: white;
+}
+.buttonDetails {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.buttonremove {
+  background-color: rgb(6, 172, 122);
+  /* blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.btn {
+  color: brown;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Here I will create media query */
+
+@media only screen and (min-width: 750px) {
+  article {
+    padding: 1em;
+    border: solid 2px;
+    width: 40%;
+    height: 200px;
+    margin-left: 30px;
+    border-color: #2c3e50;
+    display: inline-table;
+    border-radius: 8px;
+    background-color: #1a7e79; /* fallback for old browsers */
+    border-radius: 50px;
+  }
+  .title {
+    font-size: 30px;
+    margin: auto;
+    width: 15%;
+    border: 3px solid #73ad21;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
